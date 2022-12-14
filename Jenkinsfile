@@ -1,8 +1,8 @@
+
+#!groovy
 pipeline {
-  agent { label 'docker' }
-  options {
-    buildDiscarder(logRotator(numToKeepStr: '5'))
-  }
+    agent none
+}
   environment {
     DOCKERHUB_CREDENTIALS = credentials('tatianamoraru-dockerhub')
   }
